@@ -33,9 +33,9 @@ int main()
         auto final = std::chrono::high_resolution_clock::now();
         auto alfanbeta = std::chrono::duration_cast<std::chrono::milliseconds>(final - inicio);
         board.movimiento(mov.first, mov.second, 'O');
-        cout << "El algoritmo sin alfabeta pruning se demoro: " << mininmax << endl;
-        cout << "Con alfabeta pruning se demoro: " << alfanbeta << endl;
-        cout << "tuvo entonces una diferencia de: " << mininmax - alfanbeta << endl;
+        cout << "El algoritmo sin alfabeta pruning se demoro: " << mininmax.count() << endl;
+        cout << "Con alfabeta pruning se demoro: " << alfanbeta.count() << endl;
+        cout << "tuvo entonces una diferencia de: " << mininmax.count() - alfanbeta.count() << endl;
         char win = board.ganador();
         if(win != 'D') {
             board.print();
