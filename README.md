@@ -48,9 +48,11 @@ o	Beta: El mejor resultado que MIN puede asegurar hasta ese punto.
 Si MAX encuentra una opción mejor que el valor de Beta actual, ya no tiene sentido explorar otras opciones porque MIN no permitirá que ocurra. Lo mismo ocurre al revés con Alfa.
 Ejemplo en Tic-Tac-Toe
 Volviendo al ejemplo del tablero:
-> X | O | X 
-> O | X | O 
-> _ | X | O
+|   |   |   |
+|---|---|---|
+| X | O | X |
+| O | X | O |
+| _ | X | O |
 
 Si MAX ya encontró un movimiento que le asegura ganar (+10), no es necesario que el algoritmo siga analizando otras jugadas posibles, ya que el resultado no cambiará. Esto ahorra tiempo y hace el cálculo más rápido.
 Con la poda alfa-beta, el algoritmo se enfoca solo en las opciones que realmente tienen impacto en el resultado final, optimizando su rendimiento y reduciendo el tiempo de ejecución.
